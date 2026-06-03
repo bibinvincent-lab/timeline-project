@@ -1,66 +1,81 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+// import data from "@/data/timeline.json";
 
-export default function Home() {
+// export default function TimelinePage() {
+//   const sorted = [...data].sort(
+//     (a, b) => new Date(a.date) - new Date(b.date)
+//   );
+
+//   return (
+//     <div style={{ padding: 20 }}>
+//       <h1>Timeline</h1>
+
+//       <ul>
+//         {sorted.map((item) => (
+//           <li key={item.id}>
+//             <b>{item.title}</b> — {item.date}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+import data from "@/data/timeline.json";
+
+import {
+  Timeline,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineConnector,
+  TimelineContent,
+  TimelineDot,
+} from "@mui/lab";
+
+import {
+  Typography,
+  Paper,
+  Container,
+} from "@mui/material";
+
+export default function TimelinePage() {
+  const sorted = [...data].sort(
+    (a, b) => new Date(a.date) - new Date(b.date)
+  );
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <Container maxWidth="md" sx={{ py: 5 }}>
+      <Typography variant="h4" gutterBottom>
+        Timeline
+      </Typography>
+
+      <Timeline position="right">
+        {sorted.map((event, index) => (
+          <TimelineItem key={event.id}>
+            <TimelineSeparator>
+              <TimelineDot color="primary" />
+
+              {index < sorted.length - 1 && (
+                <TimelineConnector />
+              )}
+            </TimelineSeparator>
+
+            <TimelineContent>
+              <Paper elevation={3} sx={{ p: 2, mb: 2 }}>
+                <Typography variant="h6">
+                  {event.title}
+                </Typography>
+
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                >
+                  {event.date}
+                </Typography>
+              </Paper>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+      </Timeline>
+    </Container>
   );
 }

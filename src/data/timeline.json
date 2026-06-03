@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Started Learning Coding",
+    "date": "2023-01-10",
+    "description": "Began learning HTML, CSS, and JavaScript fundamentals.",
+    "category": "education",
+    "technologies": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 2,
+    "title": "Built First Project",
+    "date": "2023-06-15",
+    "description": "Created and deployed my first portfolio website.",
+    "category": "project",
+    "technologies": ["React", "MUI"]
+  },
+  {
+    "id": 3,
+    "title": "Got Internship",
+    "date": "2024-03-01",
+    "description": "Joined a software company as a Frontend Developer Intern.",
+    "category": "career",
+    "technologies": ["React", "TypeScript"]
+  },
+  {
+    "id": 4,
+    "title": "Promoted to Full-Time",
+    "date": "2025-02-20",
+    "description": "Successfully transitioned from intern to full-time developer.",
+    "category": "promotion",
+    "technologies": ["Next.js", "Node.js"]
+  },
+  {
+    "id": 5,
+    "title": "Started New Job",
+    "date": "2026-01-05",
+    "description": "Joined a new company to work on enterprise applications.",
+    "category": "career",
+    "technologies": ["React", "AWS", "Docker"]
+  }
+]
