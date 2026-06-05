@@ -1,42 +1,355 @@
+
 [
   {
     "id": 1,
+    "slug": "started-learning-coding",
     "title": "Started Learning Coding",
+    "subtitle": "Beginning my journey into web development",
     "date": "2023-01-10",
-    "description": "Began learning HTML, CSS, and JavaScript fundamentals.",
     "category": "education",
-    "technologies": ["HTML", "CSS", "JavaScript"]
+    "status": "Completed",
+    "description": "Began learning HTML, CSS, and JavaScript fundamentals.",
+    "overview": "This marked the beginning of my programming journey. I started from zero knowledge and focused on understanding how websites are built and how frontend technologies work together.",
+    "story": "Initially, web development felt overwhelming because everything was new. I spent time learning HTML structure, CSS styling, responsive layouts, and JavaScript basics. I practiced by recreating simple webpages and experimenting with browser developer tools.",
+    "problem": "No prior technical knowledge and difficulty understanding coding concepts.",
+    "goal": "Learn web development fundamentals and become capable of building simple websites independently.",
+    "outcome": "Built confidence with frontend basics and developed a strong learning habit.",
+
+    "role": "Self Learner",
+    "location": "Remote",
+    "duration": "3 Months",
+
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+
+    "skillsGained": [
+      "Responsive Design",
+      "DOM Basics",
+      "CSS Layouts",
+      "Problem Solving"
+    ],
+
+    "highlights": [
+      "Learned semantic HTML",
+      "Understood CSS Flexbox and positioning",
+      "Started writing JavaScript logic",
+      "Built small practice projects daily"
+    ],
+
+    "challenges": [
+      "Understanding JavaScript logic",
+      "Debugging CSS alignment issues",
+      "Learning responsive layouts"
+    ],
+
+    "solutions": [
+      "Practiced daily coding",
+      "Read documentation",
+      "Built mini projects repeatedly"
+    ],
+
+    "lessonsLearned": [
+      "Consistency matters more than speed",
+      "Debugging is part of learning",
+      "Hands-on practice improves understanding"
+    ],
+
+    "milestones": [
+      {
+        "title": "Started HTML",
+        "date": "2023-01-12"
+      },
+      {
+        "title": "Learned CSS Flexbox",
+        "date": "2023-02-01"
+      },
+      {
+        "title": "Built First Responsive Page",
+        "date": "2023-03-01"
+      }
+    ],
+
+    "gallery": [
+      "/timeline/coding1.png",
+      "/timeline/coding2.png"
+    ],
+
+    "links": {
+      "github": "",
+      "demo": "",
+      "certificate": ""
+    },
+
+    "reflection": "This phase taught me discipline and helped me understand that programming becomes easier through repeated practice."
   },
+
   {
     "id": 2,
+    "slug": "built-first-project",
     "title": "Built First Project",
+    "subtitle": "Created and deployed my first portfolio website",
     "date": "2023-06-15",
-    "description": "Created and deployed my first portfolio website.",
     "category": "project",
-    "technologies": ["React", "MUI"]
+    "status": "Completed",
+    "description": "Created and deployed my first portfolio website.",
+    "overview": "After learning fundamentals, I wanted to build something practical and publicly visible.",
+    "story": "I designed and developed my first portfolio website to showcase projects and skills. This helped me understand component structure, UI organization, deployment, and responsive layouts in a real-world context.",
+    "problem": "Needed practical experience applying concepts learned during self-study.",
+    "goal": "Build a real project and deploy it online.",
+    "outcome": "Successfully launched a portfolio website and gained confidence building complete projects.",
+
+    "role": "Frontend Developer",
+    "location": "Remote",
+    "duration": "1 Month",
+
+    "technologies": [
+      "React",
+      "MUI"
+    ],
+
+    "skillsGained": [
+      "Component Design",
+      "UI Development",
+      "Responsive Layouts",
+      "Deployment"
+    ],
+
+    "highlights": [
+      "Built reusable UI components",
+      "Created responsive layouts",
+      "Deployed first live project",
+      "Learned project structuring"
+    ],
+
+    "challenges": [
+      "Managing project structure",
+      "Understanding component reusability",
+      "Fixing responsive bugs"
+    ],
+
+    "solutions": [
+      "Refactored code repeatedly",
+      "Followed best practices",
+      "Improved layout iteratively"
+    ],
+
+    "lessonsLearned": [
+      "Real projects teach faster",
+      "Clean code matters",
+      "Deployment builds confidence"
+    ],
+
+    "milestones": [
+      {
+        "title": "Created UI Components",
+        "date": "2023-06-05"
+      },
+      {
+        "title": "Responsive Design Finished",
+        "date": "2023-06-10"
+      },
+      {
+        "title": "Project Deployed",
+        "date": "2023-06-15"
+      }
+    ],
+
+    "gallery": [
+      "/timeline/project1.png",
+      "/timeline/project2.png"
+    ],
+
+    "links": {
+      "github": "",
+      "demo": ""
+    },
+
+    "reflection": "Building a real project helped me connect theory with practical implementation."
   },
+
   {
     "id": 3,
+    "slug": "got-internship",
     "title": "Got Internship",
+    "subtitle": "Joined a software company as Frontend Developer Intern",
     "date": "2024-03-01",
-    "description": "Joined a software company as a Frontend Developer Intern.",
     "category": "career",
-    "technologies": ["React", "TypeScript"]
+    "status": "Completed",
+    "description": "Joined a software company as a Frontend Developer Intern.",
+    "overview": "This was my transition from self-learning into professional software development.",
+    "story": "Working in a company environment introduced me to collaboration, deadlines, real-world debugging, and production-level frontend development.",
+    "problem": "Needed practical industry experience.",
+    "goal": "Learn professional workflows and contribute to real products.",
+    "outcome": "Gained hands-on experience in frontend engineering and collaboration.",
+
+    "role": "Frontend Developer Intern",
+    "location": "Office",
+    "duration": "11 Months",
+
+    "technologies": [
+      "React",
+      "TypeScript"
+    ],
+
+    "skillsGained": [
+      "Team Collaboration",
+      "Code Reviews",
+      "Professional Debugging",
+      "TypeScript"
+    ],
+
+    "highlights": [
+      "Worked on production code",
+      "Collaborated with developers",
+      "Learned Git workflows",
+      "Participated in debugging sessions"
+    ],
+
+    "challenges": [
+      "Understanding large codebases",
+      "Meeting deadlines",
+      "Learning professional standards"
+    ],
+
+    "solutions": [
+      "Asked questions frequently",
+      "Improved debugging workflow",
+      "Read internal documentation"
+    ],
+
+    "lessonsLearned": [
+      "Communication matters",
+      "Code quality is important",
+      "Learning never stops"
+    ],
+
+    "gallery": [],
+
+    "links": {
+      "github": ""
+    },
+
+    "reflection": "This experience helped me understand what software engineering looks like in practice."
   },
+
   {
     "id": 4,
+    "slug": "promoted-full-time",
     "title": "Promoted to Full-Time",
+    "subtitle": "Transitioned from intern to full-time developer",
     "date": "2025-02-20",
-    "description": "Successfully transitioned from intern to full-time developer.",
     "category": "promotion",
-    "technologies": ["Next.js", "Node.js"]
+    "status": "Completed",
+    "description": "Successfully transitioned from intern to full-time developer.",
+    "overview": "Receiving a full-time role validated the skills and trust developed during internship.",
+    "story": "I started taking ownership of tasks, improving system understanding, and contributing to more critical features.",
+    "problem": "Needed to transition from learner mindset to ownership mindset.",
+    "goal": "Become a dependable software engineer.",
+    "outcome": "Earned a permanent position and larger responsibilities.",
+
+    "role": "Frontend Developer",
+    "location": "Office",
+    "duration": "Ongoing",
+
+    "technologies": [
+      "Next.js",
+      "Node.js"
+    ],
+
+    "skillsGained": [
+      "Ownership",
+      "Architecture Thinking",
+      "Production Debugging"
+    ],
+
+    "highlights": [
+      "Handled production issues",
+      "Built larger features",
+      "Worked independently"
+    ],
+
+    "challenges": [
+      "Managing responsibilities",
+      "Balancing deadlines"
+    ],
+
+    "solutions": [
+      "Improved planning",
+      "Focused on clean implementation"
+    ],
+
+    "lessonsLearned": [
+      "Ownership matters",
+      "Consistency builds trust"
+    ],
+
+    "gallery": [],
+
+    "links": {},
+
+    "reflection": "This phase helped me become more confident in my engineering decisions."
   },
+
   {
     "id": 5,
+    "slug": "started-new-job",
     "title": "Started New Job",
+    "subtitle": "Joined a company building enterprise applications",
     "date": "2026-01-05",
-    "description": "Joined a new company to work on enterprise applications.",
     "category": "career",
-    "technologies": ["React", "AWS", "Docker"]
+    "status": "Ongoing",
+    "description": "Joined a new company to work on enterprise applications.",
+    "overview": "A new chapter focused on larger systems and scalable applications.",
+    "story": "The role exposed me to enterprise-level systems, collaboration across teams, and performance-focused engineering.",
+    "problem": "Needed to adapt to a new environment and larger architecture.",
+    "goal": "Grow into a stronger engineer working on scalable systems.",
+    "outcome": "Currently learning and contributing to enterprise software.",
+
+    "role": "Software Engineer",
+    "location": "Hybrid",
+    "duration": "Ongoing",
+
+    "technologies": [
+      "React",
+      "AWS",
+      "Docker"
+    ],
+
+    "skillsGained": [
+      "Cloud Concepts",
+      "Scalability",
+      "System Thinking"
+    ],
+
+    "highlights": [
+      "Worked on enterprise systems",
+      "Collaborated across teams",
+      "Improved architecture understanding"
+    ],
+
+    "challenges": [
+      "Large system complexity",
+      "Understanding cloud workflows"
+    ],
+
+    "solutions": [
+      "Read documentation",
+      "Collaborated with seniors"
+    ],
+
+    "lessonsLearned": [
+      "Systems thinking matters",
+      "Adaptability is important"
+    ],
+
+    "gallery": [],
+
+    "links": {},
+
+    "reflection": "This role continues to push my technical growth."
   }
 ]
+

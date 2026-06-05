@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import data from "@/data/timeline.json";
 
@@ -32,8 +33,12 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TerminalIcon from "@mui/icons-material/Terminal";
 
 export default function TimelinePage() {
+  const router = useRouter();
+
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(
+    theme.breakpoints.down("sm")
+  );
 
   const [search, setSearch] = useState("");
 
@@ -55,7 +60,8 @@ export default function TimelinePage() {
     return [...data]
       .sort(
         (a, b) =>
-          Date.parse(a.date) - Date.parse(b.date)
+          Date.parse(a.date) -
+          Date.parse(b.date)
       )
       .filter(
         (event) =>
@@ -90,8 +96,9 @@ export default function TimelinePage() {
         color="text.secondary"
         sx={{ mb: 4 }}
       >
-        A chronological overview of my learning,
-        projects, and career milestones.
+        A chronological overview of my
+        learning, projects, and career
+        milestones.
       </Typography>
 
       <TextField
@@ -105,122 +112,114 @@ export default function TimelinePage() {
         sx={{ mb: 5 }}
       />
 
-      {filteredEvents.length === 0 ? (
-        <Paper
-          sx={{
-            p: 4,
-            textAlign: "center",
-          }}
-        >
-          <Typography variant="h6">
-            No timeline events found.
-          </Typography>
-        </Paper>
-      ) : (
-        <Timeline
-          position={
-            isMobile ? "right" : "alternate"
-          }
-        >
-          {filteredEvents.map(
-            (event, index) => (
-              <TimelineItem key={event.id}>
-                <TimelineSeparator>
-                  <TimelineDot
-                    color={
-                      categoryColors[
-                        event.category
-                      ] || "grey"
-                    }
-                  >
-                    {categoryIcons[
+      <Timeline
+        position={
+          isMobile ? "right" : "alternate"
+        }
+      >
+        {filteredEvents.map(
+          (event, index) => (
+            <TimelineItem key={event.id}>
+              <TimelineSeparator>
+                <TimelineDot
+                  color={
+                    categoryColors[
                       event.category
-                    ] || <TerminalIcon />}
-                  </TimelineDot>
-
-                  {index <
-                    filteredEvents.length - 1 && (
-                    <TimelineConnector />
+                    ] || "grey"
+                  }
+                >
+                  {categoryIcons[
+                    event.category
+                  ] || (
+                    <TerminalIcon />
                   )}
-                </TimelineSeparator>
+                </TimelineDot>
 
-                <TimelineContent>
-                  <Paper
-                    elevation={0}
-                    sx={{
-                      p: 3,
-                      mb: 3,
-                      borderRadius: 3,
-                      border: "1px solid",
-                      borderColor: "divider",
-                      transition:
-                        "all 0.3s ease",
+                {index <
+                  filteredEvents.length -
+                    1 && (
+                  <TimelineConnector />
+                )}
+              </TimelineSeparator>
 
-                      "&:hover": {
-                        transform:
-                          "translateY(-4px)",
-                        boxShadow: 4,
-                      },
-                    }}
+              <TimelineContent>
+                <Paper
+                  elevation={0}
+                  onClick={() =>
+                    router.push(
+                      `/detailed/${event.id}`
+                    )
+                  }
+                  sx={{
+                    p: 3,
+                    mb: 3,
+                    borderRadius: 3,
+                    border: "1px solid",
+                    borderColor: "divider",
+                    transition:
+                      "all 0.3s ease",
+                    cursor: "pointer",
+
+                    "&:hover": {
+                      transform:
+                        "translateY(-4px)",
+                      boxShadow: 4,
+                    },
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    fontWeight={700}
                   >
-                    <Typography
-                      variant="h6"
-                      fontWeight={700}
-                    >
-                      {event.title}
-                    </Typography>
+                    {event.title}
+                  </Typography>
 
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      sx={{ mb: 2 }}
-                    >
-                      {formatDate(event.date)}
-                    </Typography>
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ mb: 2 }}
+                  >
+                    {formatDate(event.date)}
+                  </Typography>
 
-                    <Typography
-                      variant="body1"
-                      sx={{ mb: 2 }}
-                    >
-                      {event.description}
-                    </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{ mb: 2 }}
+                  >
+                    {event.description}
+                  </Typography>
 
-                    {event.technologies && (
-                      <Box mt={2}>
-                        {/* <Stack
-                          direction="row"
-                          spacing={1}
-                          flexWrap="wrap"
-                          useFlexGap
-                        > */}
-
-                        <Stack
-  direction="row"
-  spacing={1}
-  useFlexGap
-  sx={{ flexWrap: "wrap" }}
->
-                          {event.technologies.map(
-                            (tech) => (
-                              <Chip
-                                key={tech}
-                                label={tech}
-                                size="small"
-                                color="primary"
-                                variant="outlined"
-                              />
-                            )
-                          )}
-                        </Stack>
-                      </Box>
-                    )}
-                  </Paper>
-                </TimelineContent>
-              </TimelineItem>
-            )
-          )}
-        </Timeline>
-      )}
+                  {event.technologies && (
+                    <Box mt={2}>
+                      <Stack
+                        direction="row"
+                        spacing={1}
+                        useFlexGap
+                        sx={{
+                          flexWrap:
+                            "wrap",
+                        }}
+                      >
+                        {event.technologies.map(
+                          (tech) => (
+                            <Chip
+                              key={tech}
+                              label={tech}
+                              size="small"
+                              color="primary"
+                              variant="outlined"
+                            />
+                          )
+                        )}
+                      </Stack>
+                    </Box>
+                  )}
+                </Paper>
+              </TimelineContent>
+            </TimelineItem>
+          )
+        )}
+      </Timeline>
     </Container>
   );
 }
