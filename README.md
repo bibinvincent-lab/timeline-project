@@ -48,7 +48,7 @@ User-facing routes in this app:
 - `/time` — client timeline that fetches data from the API.
 - `/time/:id` — server-rendered detail page that fetches the corresponding event via the API.
 - `/detailed` and `/detailed/:id` — alternate detailed listing and detail pages.
-- `/test` — demo/test page.
+
 
 Most pages read from `src/data/timeline.json` or call the API endpoints above.
 
@@ -62,7 +62,7 @@ Most pages read from `src/data/timeline.json` or call the API endpoints above.
 - [src/app/time/[id]/page.js](src/app/time/[id]/page.js) — server page that fetches a single event via `/api/timeline/:id`.
 - [src/app/detailed/page.js](src/app/detailed/page.js) — alternate detailed timeline listing.
 - [src/app/detailed/[id]/page.js](src/app/detailed/[id]/page.js) — server detail page using in-repo data.
-- [src/app/test/page.js](src/app/test/page.js) — a test/demo page.
+
 - [src/app/api/timeline/route.js](src/app/api/timeline/route.js) — API endpoint returning all timeline events.
 - [src/app/api/timeline/[id]/route.js](src/app/api/timeline/[id]/route.js) — API endpoint returning a single event by `id`.
 - [src/data/timeline.json](src/data/timeline.json) — primary timeline data used by the API/pages.
