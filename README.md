@@ -44,7 +44,7 @@ npm run start
 User-facing routes in this app:
 
 - `/` — app root (rendered by `src/app/page.js`) showing a timeline built with MUI `Timeline` components.
-- - `/detailed` and `/detailed/:id` — alternate detailed listing and detail pages.
+- `/detailed` and `/detailed/:id` — alternate detailed listing and detail pages.
 - `/time` — client timeline that fetches data from the API.
 - `/time/:id` — server-rendered detail page that fetches the corresponding event via the API.
 - `/timeline` — interactive client timeline with filters and search.
